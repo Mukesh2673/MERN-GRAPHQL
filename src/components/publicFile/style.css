@@ -1,0 +1,41 @@
+.parent{
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: 'row'
+    
+    
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.select{
+    width: 120px;
+}
+.child{
+    margin-top: 10px;
+}
+.container-fluid{
+    background-image: url('../../../public/13104.jpg'); /* Replace with the path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    padding: 50px;
+    margin-top:10px;
+    position: relative;
+}
+.container-fluid .custom-button{
+    position: absolute;
+    top: 10px; /* Adjust the distance from the top */
+    right: 10px; /* Adjust the distance from the right */
+    width: 120px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
