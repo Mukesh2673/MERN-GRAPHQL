@@ -1,0 +1,33 @@
+    scalar DateTime
+    extend type Query {
+        publicFiles: [PublicFile]
+    }
+    type PublicFile {
+        id: Int
+        fileName: String
+        url: String
+        uploadDate: DateTime
+        lastUsed: DateTime
+    }
+
+    type DeleteFile {
+        id: Int
+    }
+
+    extend type Mutation {
+        createPublicFiles(
+            fileName: String
+            url: String
+            uploadDate: DateTime
+            lastUsed: DateTime
+        ): PublicFile
+
+        updatePublicFiles(
+            id: String
+            fileName: String
+            url: String
+            uploadDate: DateTime
+            lastUsed: DateTime
+        ): PublicFile
+        deletePublicFiles(id: Int): DeleteFile
+    }

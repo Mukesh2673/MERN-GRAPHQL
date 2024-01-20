@@ -1,0 +1,10 @@
+  type Query {
+    securedResource: String
+  }
+  type Mutation {
+    login(username: String!, password: String!): AuthResponse
+  }
+  type AuthResponse {
+    token: String
+    error: String
+  }

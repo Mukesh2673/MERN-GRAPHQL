@@ -1,0 +1,24 @@
+    scalar DateTime
+    extend type Query {
+        users: [Users]
+    }
+    type Users {
+        id: Int
+        firstName: String
+        lastName: String
+        email: String
+        phone: String
+        password: String
+        bio:String
+    }
+
+    extend type Mutation {
+        register(
+        firstName: String
+        lastName: String
+        email: String
+        phone: String
+        password: String
+        bio:String
+        ): Users
+    }

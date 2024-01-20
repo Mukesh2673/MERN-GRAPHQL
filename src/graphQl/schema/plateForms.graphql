@@ -1,0 +1,18 @@
+scalar DateTime
+extend type Query {
+    plateForms: [plateForm]
+}
+type plateForm {
+    id: Int
+    name: String
+}
+
+type DeletePlateForm {
+    id: Int
+}
+
+extend type Mutation {
+    createPlateForm(name: String): plateForm
+    updatePlateForm(id: Int, name: String): plateForm
+    deletePlateForm(id: String): DeleteFile
+}
